@@ -1,0 +1,158 @@
+PS D:\Mini Projects\Assignments-2> npm --version
+10.4.0
+PS D:\Mini Projects\Assignments-2> npm install -g @angular/cli@latest
+
+changed 232 packages in 5s
+
+44 packages are looking for funding
+  run `npm fund` for details
+PS D:\Mini Projects\Assignments-2> ng new part-c
+ng : File C:\Users\vaish\AppData\Roaming\npm\ng.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at 
+https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
++ ng new part-c
++ ~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+PS D:\Mini Projects\Assignments-2> ng new part-c
+ng : File C:\Users\vaish\AppData\Roaming\npm\ng.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at   
+https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
++ ng new part-c
++ ~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+PS D:\Mini Projects\Assignments-2> Set-ExecutionPolicy RemoteSigned
+>>
+Set-ExecutionPolicy : Access to the registry key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell' is denied. To change the execution policy 
+for the default (LocalMachine) scope, start Windows PowerShell with the "Run as administrator" option. To change the execution policy for the current user, run
+"Set-ExecutionPolicy -Scope CurrentUser".
+At line:1 char:1
++ Set-ExecutionPolicy RemoteSigned
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (:) [Set-ExecutionPolicy], UnauthorizedAccessException
+    + FullyQualifiedErrorId : System.UnauthorizedAccessException,Microsoft.PowerShell.Commands.SetExecutionPolicyCommand
+PS D:\Mini Projects\Assignments-2> Set-ExecutionPolicy RemoteSigned
+>>
+Set-ExecutionPolicy : Access to the registry key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell' is denied. To change the execution policy    
+for the default (LocalMachine) scope, start Windows PowerShell with the "Run as administrator" option. To change the execution policy for the current user, run
+"Set-ExecutionPolicy -Scope CurrentUser".
+At line:1 char:1
++ Set-ExecutionPolicy RemoteSigned
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (:) [Set-ExecutionPolicy], UnauthorizedAccessException
+    + FullyQualifiedErrorId : System.UnauthorizedAccessException,Microsoft.PowerShell.Commands.SetExecutionPolicyCommand
+PS D:\Mini Projects\Assignments-2> powershell -ExecutionPolicy Bypass -Command "ng new part-c"
+>>
+Node.js version v21.6.1 detected.
+Odd numbered Node.js versions will not enter LTS status and should not be used for production. For more information, please see https://nodejs.org/en/about/previous-releases/.  
+? Would you like to share pseudonymous usage data about this project with the Angular Team
+at Google under Google's Privacy Policy at https://policies.google.com/privacy. For more
+details and how to change this setting, see https://angular.io/analytics. Yes
+
+Thank you for sharing pseudonymous usage data. Should you change your mind, the following
+command will disable this feature entirely:
+
+    ng analytics disable --global
+
+Global setting: enabled
+Local setting: No local workspace configuration file.
+Effective status: enabled
+? Which stylesheet format would you like to use? CSS             [ https://developer.mozilla.org/docs/Web/CSS                     ]
+? Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering)? Yes
+CREATE part-c/angular.json (2838 bytes)
+CREATE part-c/package.json (1263 bytes)
+CREATE part-c/README.md (1086 bytes)
+CREATE part-c/tsconfig.json (889 bytes)
+CREATE part-c/.editorconfig (290 bytes)
+CREATE part-c/.gitignore (590 bytes)
+CREATE part-c/tsconfig.app.json (342 bytes)
+CREATE part-c/tsconfig.spec.json (287 bytes)
+CREATE part-c/server.ts (1763 bytes)
+CREATE part-c/.vscode/extensions.json (134 bytes)
+CREATE part-c/.vscode/launch.json (490 bytes)
+CREATE part-c/.vscode/tasks.json (980 bytes)
+CREATE part-c/src/main.ts (256 bytes)
+CREATE part-c/src/favicon.ico (15086 bytes)
+CREATE part-c/src/index.html (304 bytes)
+CREATE part-c/src/styles.css (81 bytes)
+CREATE part-c/src/main.server.ts (271 bytes)
+CREATE part-c/src/app/app.component.html (20239 bytes)
+CREATE part-c/src/app/app.component.spec.ts (945 bytes)
+CREATE part-c/src/app/app.component.ts (315 bytes)
+CREATE part-c/src/app/app.component.css (0 bytes)
+CREATE part-c/src/app/app.config.ts (330 bytes)
+CREATE part-c/src/app/app.routes.ts (80 bytes)
+CREATE part-c/src/app/app.config.server.ts (361 bytes)
+CREATE part-c/src/assets/.gitkeep (0 bytes)
+✔ Packages installed successfully.
+warning: in the working copy of 'package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+    Successfully initialized git.
+PS D:\Mini Projects\Assignments-2> dir
+
+
+    Directory: D:\Mini Projects\Assignments-2
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        30-03-2024     09:54                part-c
+
+
+PS D:\Mini Projects\Assignments-2> cd part-c
+PS D:\Mini Projects\Assignments-2\part-c> ng serve
+ng : File C:\Users\vaish\AppData\Roaming\npm\ng.ps1 cannot be loaded 
+because running scripts is disabled on this system. For more
+information, see about_Execution_Policies at
+https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
++ ng serve
++ ~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityExcep  
+   tion
+    + FullyQualifiedErrorId : UnauthorizedAccess
+PS D:\Mini Projects\Assignments-2\part-c> powershell -ExecutionPolicy Bypass -Command "ng serve"
+>>
+Node.js version v21.6.1 detected.
+Odd numbered Node.js versions will not enter LTS status and should not be used for production. For more information, please see https://nodejs.org/en/about/previous-releases/.
+? Would you like to share pseudonymous usage data about this project  
+with the Angular Team
+at Google under Google's Privacy Policy at 
+https://policies.google.com/privacy. For more
+details and how to change this setting, see 
+https://angular.io/analytics. Yes
+
+Thank you for sharing pseudonymous usage data. Should you change your mind, the following
+command will disable this feature entirely:
+
+    ng analytics disable
+
+Global setting: enabled
+Local setting: enabled
+Effective status: enabled
+Browser bundles        
+Initial chunk files     | Names               |  Raw size
+polyfills.js            | polyfills           |  83.60 kB | 
+main.js                 | main                |   4.08 kB | 
+styles.css              | styles              |  95 bytes | 
+
+                        | Initial total       |  87.77 kB
+
+
+Server bundles
+Initial chunk files     | Names               |  Raw size
+chunk-FDCK5V3E.mjs      | -                   |   1.70 MB | 
+polyfills.server.mjs    | polyfills.server    | 555.05 kB | 
+main.server.mjs         | main.server         | 196.99 kB | 
+chunk-VPSODEBW.mjs      | -                   |   2.51 kB | 
+render-utils.server.mjs | render-utils.server | 423 bytes | 
+
+Lazy chunk files        | Names               |  Raw size
+chunk-OTT6LQ5K.mjs      | xhr2                |  39.10 kB | 
+
+Application bundle generation complete. [10.240 seconds]
+
+Watch mode enabled. Watching for file changes...
+  ➜  Local:   http://localhost:4200/
+  ➜  press h + enter to show help

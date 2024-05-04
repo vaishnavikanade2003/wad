@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Stock Trading Admin Dashboard</title>
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        #wrapper {
+            display: flex;
+        }
+
+        #sidebar {
+            min-width: 250px;
+            max-width: 250px;
+            background: #343a40;
+            color: #fff;
+            transition: all 0.3s;
+        }
+
+        #content {
+            flex-grow: 1;
+            padding: 30px;
+        }
+
+        .navbar-dark .navbar-toggler-icon {
+            background-color: #fff;
+        }
+
+        #sidebar ul.components {
+            padding: 20px 0;
+            border-bottom: 1px solid #47748b;
+        }
+
+        #sidebar ul p {
+            color: #fff;
+            padding: 10px;
+        }
+
+        #sidebar ul li a {
+            padding: 10px;
+            font-size: 1.1em;
+            display: block;
+        }
+
+        #sidebar ul li a:hover {
+            color: #7386D5;
+            background: #fff;
+        }
+
+        #sidebar ul li.active>a,
+        a[aria-expanded="true"] {
+            color: #fff;
+            background: #6d7fcc;
+        }
+
+        a[data-toggle="collapse"] {
+            position: relative;
+        }
+
+        #content {
+            width: 100%;
+            padding: 20px;
+            transition: all 0.3s;
+        }
+
+        @media (max-width:768px) {
+            #sidebar {
+                min-width: 80px;
+                max-width: 80px;
+                text-align: center;
+                overflow: hidden;
+            }
+
+            #sidebar a {
+                text-align: center;
+                padding: 10px;
+                width: 100%;
+                font-size: 12px;
+            }
+
+            #sidebar ul.components {
+                padding: 0;
+            }
+
+            #sidebar ul li {
+                text-align: center;
+            }
+
+            #sidebar ul li a {
+                padding: 20px 10px;
+            }
+
+            #sidebar ul li a span {
+                font-size: 11px;
+            }
+
+            #content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="d-flex" id="wrapper">
+
+        <!-- Sidebar -->
+        <div class="bg-dark" id="sidebar">
+            <div class="sidebar-heading">Stock Trading Admin</div>
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#">
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Stocks
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Trades
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Portfolios
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Reports
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Page Content -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <button class="navbar-toggler" type="button" id="sidebarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+
+            <div class="container-fluid">
+
+                <h2 class="mt-4">Stock Trading Dashboard</h2>
+
+                <!-- Total Statistics Cards -->
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <div class="card bg-primary text-white">
+                            <div class="card-body">
+                                <h5 class="card-title">Total Stocks</h5>
+                                <p class="card-text">50</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-success text-white">
+                            <div class="card-body">
+                                <h5 class="card-title">Total Trades</h5>
+                                <p class="card-text">100</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-warning text-white">
+                            <div class="card-body">
+                                <h5 class="card-title">Active Portfolios</h5>
+                                <p class="card-text">30</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Sections and Cards -->
+
+                <!-- Stocks Table -->
+                <div class="row mt-4">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Stocks Overview</h5>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Stock Symbol</th>
+                                            <th>Price</th>
+                                            <th>Change</th>
+                                            <th>Volume</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>APPLE</td>
+                                            <td>$150.25</td>
+                                            <td>+2.5%</td>
+                                            <td>1,000,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>GOOGLE</td>
+                                            <td>$2500.75</td>
+                                            <td>-1.2%</td>
+                                            <td>500,000</td>
+                                        </tr>
+                                        <!-- Add more rows as needed -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Trades -->
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Recent Trades</h5>
+                                <ul class="list-group">
+                                    <li class="list-group-item">APPLE - Buy 100 shares</li>
+                                    <li class="list-group-item">GOOGEL - Sell 50 shares</li>
+                                    <!-- Add more trades as needed -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more cards or sections as needed -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        $("#sidebarCollapse").on("click", function () {
+            $("#sidebar").toggleClass("active");
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+npm init
+
+create database names dtudent having collection profile and insert database
+
+npm install mongodb
+
+npm install express
+
+write mongodb.js code 
+
+write index.js code
+
+run on terminal node index.js
+
+open postman and do changes

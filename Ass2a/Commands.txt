@@ -1,0 +1,188 @@
+PS D:\Assignments6th_sem\WAD\Ass2a> git config --global user.name "Vaishnavi Kanade"
+PS D:\Assignments6th_sem\WAD\Ass2a> git config --global user.email "vaishnavikanade2003@gmail.com"
+PS D:\Assignments6th_sem\WAD\Ass2a> git init
+Reinitialized existing Git repository in D:/Assignments6th_sem/WAD/Ass2a/.git/
+PS D:\Assignments6th_sem\WAD\Ass2a> git add .
+>> 
+PS D:\Assignments6th_sem\WAD\Ass2a> git commit -m "Initial commit"
+>> 
+[master 8f1500c] Initial commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 FirstFile.txt
+PS D:\Assignments6th_sem\WAD\Ass2a> git remote add origin https://github.com/VaishnaviKanade/LearningGIT.git
+PS D:\Assignments6th_sem\WAD\Ass2a> git push -u origin master
+>>
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (2/2), 202 bytes | 202.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/VaishnaviKanade/LearningGIT.git
+   355398b..8f1500c  master -> master
+branch 'master' set up to track 'origin/master'.
+PS D:\Assignments6th_sem\WAD\Ass2a> New-Item "index.html"   
+   
+   
+    Directory: D:\Assignments6th_sem\WAD\Ass2a
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        16-04-2024     18:05              0 index.html
+
+
+PS D:\Assignments6th_sem\WAD\Ass2a> dir
+
+
+    Directory: D:\Assignments6th_sem\WAD\Ass2a
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        16-04-2024     18:05              0 index.html
+
+
+PS D:\Assignments6th_sem\WAD\Ass2a> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS D:\Assignments6th_sem\WAD\Ass2a> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS D:\Assignments6th_sem\WAD\Ass2a> git add .
+>> 
+PS D:\Assignments6th_sem\WAD\Ass2a> git status               
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.html
+
+PS D:\Assignments6th_sem\WAD\Ass2a> git commit -m "html file added"       
+[master 90e5a7a] html file added
+ 1 file changed, 83 insertions(+)
+ create mode 100644 index.html
+PS D:\Assignments6th_sem\WAD\Ass2a> git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS D:\Assignments6th_sem\WAD\Ass2a> git push -u origin master
+>> 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 1011 bytes | 1011.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/VaishnaviKanade/LearningGIT.git
+   8f1500c..90e5a7a  master -> master
+branch 'master' set up to track 'origin/master'.
+PS D:\Assignments6th_sem\WAD\Ass2a> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+PS D:\Assignments6th_sem\WAD\Ass2a> git remote add origin https://github.com/VaishnaviKanade/LearningGIT.git
+error: remote origin already exists.
+PS D:\Assignments6th_sem\WAD\Ass2a>
+
+
+//add file in master branch and main branch
+PS D:\Assignments6th_sem\WAD\Ass2a> git push -u origin main        
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/VaishnaviKanade/LearningGIT.git'
+PS D:\Assignments6th_sem\WAD\Ass2a> git checkout main             
+error: pathspec 'main' did not match any file(s) known to git
+PS D:\Assignments6th_sem\WAD\Ass2a> git merge master
+Already up to date.
+PS D:\Assignments6th_sem\WAD\Ass2a> git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/VaishnaviKanade/LearningGIT.git'
+PS D:\Assignments6th_sem\WAD\Ass2a> git checkout -b main
+Switched to a new branch 'main'
+PS D:\Assignments6th_sem\WAD\Ass2a> git push -u origin main
+To https://github.com/VaishnaviKanade/LearningGIT.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/VaishnaviKanade/LearningGIT.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS D:\Assignments6th_sem\WAD\Ass2a> git fetch origin
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 873 bytes | 124.00 KiB/s, done.
+From https://github.com/VaishnaviKanade/LearningGIT
+ * [new branch]      main       -> origin/main
+PS D:\Assignments6th_sem\WAD\Ass2a> 
+PS D:\Assignments6th_sem\WAD\Ass2a> git merge origin/main
+fatal: refusing to merge unrelated histories
+PS D:\Assignments6th_sem\WAD\Ass2a> git push -u origin main
+To https://github.com/VaishnaviKanade/LearningGIT.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/VaishnaviKanade/LearningGIT.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS D:\Assignments6th_sem\WAD\Ass2a> 
+PS D:\Assignments6th_sem\WAD\Ass2a> git push -f origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/VaishnaviKanade/LearningGIT.git
+ + e1ac473...90e5a7a main -> main (forced update)
+PS D:\Assignments6th_sem\WAD\Ass2a> 
+PS D:\Assignments6th_sem\WAD\Ass2a>
+
+PS D:\Assignments6th_sem\WAD\Ass2a> 
+PS D:\Assignments6th_sem\WAD\Ass2a> git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Commands.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS D:\Assignments6th_sem\WAD\Ass2a> git add .
+>> 
+PS D:\Assignments6th_sem\WAD\Ass2a> git commit -m "command file"   
+[main 974a9a8] command file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Commands.txt
+PS D:\Assignments6th_sem\WAD\Ass2a> git push -u origin master      
+>> 
+Everything up-to-date
+branch 'master' set up to track 'origin/master'.
+PS D:\Assignments6th_sem\WAD\Ass2a> git status
+On branch main
+nothing to commit, working tree clean
+PS D:\Assignments6th_sem\WAD\Ass2a> git push -u origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 288 bytes | 288.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/VaishnaviKanade/LearningGIT.git
+   90e5a7a..974a9a8  main -> main
+branch 'main' set up to track 'origin/main'.
+PS D:\Assignments6th_sem\WAD\Ass2a> 
+PS D:\Assignments6th_sem\WAD\Ass2a> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS D:\Assignments6th_sem\WAD\Ass2a>

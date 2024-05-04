@@ -1,0 +1,137 @@
+Docker is used smoothly running and shipping the applications
+
+If the application havving after passing to tester Tester can reemove the bug using the image id itself .
+the application do not give back to correct it.
+
+
+PS D:\Assignments6th_sem\WAD> dir
+
+
+    Directory: D:\Assignments6th_sem\WAD
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+da----        16-04-2024     14:45                Ass1a
+d-----        16-04-2024     18:35                Ass1b
+d-----        16-04-2024     18:38                Ass2a
+d-----        16-04-2024     18:50                Ass2b
+d-----        16-04-2024     15:36                Ass2c
+d-----        16-04-2024     14:44                Ass3a
+d-----        16-04-2024     17:25                Ass3b
+d-----        16-04-2024     18:41                Ass4a
+
+
+PS D:\Assignments6th_sem\WAD> cd Ass2b
+PS D:\Assignments6th_sem\WAD\Ass2b> dir
+
+
+    Directory: D:\Assignments6th_sem\WAD\Ass2b
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        16-04-2024     18:56                partb
+
+
+PS D:\Assignments6th_sem\WAD\Ass2b> cd partb
+PS D:\Assignments6th_sem\WAD\Ass2b\partb> dir
+
+
+    Directory: D:\Assignments6th_sem\WAD\Ass2b\partb
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        16-04-2024     18:50              0 Dockerfile
+-a----        16-04-2024     18:52              0 index.js
+
+
+PS D:\Assignments6th_sem\WAD\Ass2b\partb> docker --version
+Docker version 25.0.3, build 4debf41
+PS D:\Assignments6th_sem\WAD\Ass2b\partb> node index.js
+PS D:\Assignments6th_sem\WAD\Ass2b\partb> docker build -t partb .
+[+] Building 0.1s (1/1) FINISHED                                               docker:default
+ => [internal] load build definition from Dockerfile                                     0.1s
+ => => transferring dockerfile: 31B                                                      0.0s
+ERROR: failed to solve: the Dockerfile cannot be empty
+PS D:\Assignments6th_sem\WAD\Ass2b\partb> node index.js
+D:\Assignments6th_sem\WAD\Ass2b\partb\index.js:1
+consol.le("This is Vaishnavi Kanade's Docker File")
+^
+
+ReferenceError: consol is not defined
+    at Object.<anonymous> (D:\Assignments6th_sem\WAD\Ass2b\partb\index.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1378:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1437:10)
+    at Module.load (node:internal/modules/cjs/loader:1212:32)
+    at Module._load (node:internal/modules/cjs/loader:1028:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:142:12)
+    at node:internal/main/run_main_module:28:49
+
+Node.js v21.6.1
+PS D:\Assignments6th_sem\WAD\Ass2b\partb> node index.js
+D:\Assignments6th_sem\WAD\Ass2b\partb\index.js:1
+consol.log("This is Vaishnavi Kanade's Docker File")
+^
+
+ReferenceError: consol is not defined
+    at Object.<anonymous> (D:\Assignments6th_sem\WAD\Ass2b\partb\index.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1378:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1437:10)
+    at Module.load (node:internal/modules/cjs/loader:1212:32)
+    at Module._load (node:internal/modules/cjs/loader:1028:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:142:12)    
+    at node:internal/main/run_main_module:28:49
+
+Node.js v21.6.1
+PS D:\Assignments6th_sem\WAD\Ass2b\partb> node index.js
+This is Vaishnavi Kanade's Docker File
+Welcome Everyone
+Assignment 2
+Part B
+PS D:\Assignments6th_sem\WAD\Ass2b\partb> docker build -t partb .
+[+] Building 28.5s (7/7) FINISHED                                              docker:default
+ => [internal] load build definition from Dockerfile                                     0.0s
+ => => transferring dockerfile: 94B                                                      0.0s 
+ => [internal] load metadata for docker.io/library/node:alpine                          10.0s 
+ => [internal] load .dockerignore                                                        0.0s
+ => => transferring context: 2B                                                          0.0s 
+ => [internal] load build context                                                        0.1s 
+ => => transferring context: 271B                                                        0.0s 
+ => [1/2] FROM docker.io/library/node:alpine@sha256:6d0f18a1c67dc218c4af50c21256616286  15.1s 
+ => => resolve docker.io/library/node:alpine@sha256:6d0f18a1c67dc218c4af50c21256616286a  0.0s 
+ => => sha256:cc08f601c4a2da4b0eb9c24d27d044a86af1485b69656f10f1b625e11 7.18kB / 7.18kB  0.0s
+ => => sha256:4abcf20661432fb2d719aaf90656f55c287f8ca915dc1c92ec14ff61e 3.41MB / 3.41MB  1.8s 
+ => => sha256:62af34686b6bc8329b9b6a578d4bb82bfbc06a67df8f1996b48872 43.94MB / 43.94MB  10.4s 
+ => => sha256:87cba792d63287ad9c7ef250dfae2e9ce0ddefee6d3f7b2256a5e0eed 2.37MB / 2.37MB  1.0s 
+ => => sha256:6d0f18a1c67dc218c4af50c21256616286a53c09e500fadf025b6d342 1.43kB / 1.43kB  0.0s 
+ => => sha256:7ea91e52a69e2bcdb8ab7724c9902245ef58036a3fcc04ce8b1b7fc0d 1.16kB / 1.16kB  0.0s 
+ => => sha256:67eb332999b747e09b74f4f1d5bf069f58b7963fc895f532f0900c843ada6 448B / 448B  1.9s
+ => => extracting sha256:4abcf20661432fb2d719aaf90656f55c287f8ca915dc1c92ec14ff61e67fba  0.3s
+ => => extracting sha256:62af34686b6bc8329b9b6a578d4bb82bfbc06a67df8f1996b48872e0afdc0d  3.1s
+ => => extracting sha256:87cba792d63287ad9c7ef250dfae2e9ce0ddefee6d3f7b2256a5e0eed7ca89  0.2s
+ => => extracting sha256:67eb332999b747e09b74f4f1d5bf069f58b7963fc895f532f0900c843ada6e  0.0s
+ => [2/2] COPY . /partb                                                                  0.5s
+ => exporting to image                                                                   0.2s
+ => => exporting layers                                                                  0.1s
+ => => writing image sha256:03ba249bba9c3f1fb697892950bee368cae62cf0bbaac23f4371f67a416  0.1s
+ => => naming to docker.io/library/partb                                                 0.0s
+
+What's Next?
+  View a summary of image vulnerabilities and recommendations → docker scout quickview
+PS D:\Assignments6th_sem\WAD\Ass2b\partb> docker scout quickview
+    i New version 1.7.0 available (installed version is 1.5.0) at https://github.com/docker/scout-cli
+Log in with your Docker ID or email address to use docker scout.
+
+If you don't have a Docker ID, head over to https://hub.docker.com to
+create one. You can log in with your password or a Personal Access Token (PAT)
+by running docker login.
+Using a limited-scope PAT grants better security and is required for organizations
+using SSO. Learn more at https://docs.docker.com/go/access-tokens/
+
+You can also log in using Docker Desktop.
+PS D:\Assignments6th_sem\WAD\Ass2b\partb> docker images
+REPOSITORY   TAG       IMAGE ID       CREATED              SIZE
+partb        latest    03ba249bba9c   About a minute ago   141MB
+PS D:\Assignments6th_sem\WAD\Ass2b\partb> 

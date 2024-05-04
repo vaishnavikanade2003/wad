@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Flat Information</title>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Flat Information Form</h1>
+    <form id="flatForm">
+      <label for="flatNumber">Flat Number:</label>
+      <input type="text" id="flatNumber" name="flatNumber" required>
+
+      <label for="residentName">Resident Name:</label>
+      <input type="text" id="residentName" name="residentName" required>
+
+      <label for="numRooms">Number of Rooms:</label>
+      <input type="number" id="numRooms" name="numRooms" required>
+
+      <label for="bhk">BHK:</label>
+      <input type="text" id="bhk" name="bhk" required>
+
+      <label for="carpetArea">Carpet Area (sq ft):</label>
+      <input type="number" id="carpetArea" name="carpetArea" required>
+
+      <label for="rent">Rent:</label>
+      <input type="number" id="rent" name="rent" required>
+
+      <label for="bathrooms">Number of Bathrooms:</label>
+      <input type="number" id="bathrooms" name="bathrooms" required>
+
+      <button type="button" onclick="addFlat()">Add Flat</button>
+    </form>
+
+    <h2>Flat List</h2>
+    <ul id="flatList"></ul>
+
+    <div id="flatDetails">
+      <h2>Flat Details</h2>
+      <div id="detailedView"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
